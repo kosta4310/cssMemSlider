@@ -52,15 +52,15 @@ h1{
     font-size: 2rem;
     text-align: center;
 }
-.label {
+/* .label {
     font-size: 1.5rem;
-}
+} */
 .slider-wrapper{
     flex:1 1 100%;
     order: 1;
     display: flex;
     margin-bottom: 2rem;
-   height: 45rem;
+    height: 45rem;
     /* height: 52vh; */
 }
 .slider{
@@ -72,6 +72,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     background-color: red;
     padding: 2rem;
     border-radius: 2rem;
@@ -92,27 +93,46 @@ h1{
     width: 40rem;
 }
 .labels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     order: 3;
     align-self: center;
+    font-size: 0;
 }
 .label{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+   padding: 1rem;
+    /* background-color: blue; */
+    /* border: 0.2rem solid blue; */
+    
+    
+    /* border-radius: 50%; */
+}
+.label div{
     height: 1rem;
     width: 1rem;
     background-color: blue;
     border: 0.2rem solid blue;
-    
-    
-    border-radius: 50%;
+     border-radius: 50%;
 }
-.label:hover{
+.label:hover {
+    cursor: pointer;
+}
+.label:hover > div{
+    cursor: pointer;
     border: 0.2rem solid white;
     background-color: white;
+    
 }
-#button1:checked ~ .labels label:nth-child(1),
-#button2:checked ~ .labels  label:nth-child(2),
-#button3:checked ~ .labels  label:nth-child(3),
-#button4:checked ~ .labels  label:nth-child(4){
+#button1:checked ~ .labels label .btn1,
+#button2:checked ~ .labels  label .btn2,
+#button3:checked ~ .labels  label .btn3,
+#button4:checked ~ .labels  label .btn4{
 background-color: transparent;
 
 }
