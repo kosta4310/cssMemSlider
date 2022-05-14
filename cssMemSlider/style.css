@@ -99,7 +99,10 @@ h1{
     cursor: pointer;
     border: 0.2rem solid white;
     background-color: white;
-    
+}
+.label:active > div{
+    background-color: grey;
+    border: 0.2rem solid grey;
 }
 #button1:checked ~ .labels label .btn1,
 #button2:checked ~ .labels  label .btn2,
